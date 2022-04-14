@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card card-body">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md">
+				<h4>Company Customers</h4>
+
+				<hr class="divider">
+				<br>
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary shadow" data-toggle="modal"
+					data-target="#exampleModalCenter">
+					Add Customer
+				</button>
+
+
+				<br>
+
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+					aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Add Customer</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-8">
+										<div class="card card-body">
+
+											{% if submitted %}
+											Succesfully added!
+
+											{% endif %}
+											<form action="" method="POST">
+												{% csrf_token %}
+												{{form.as_p}}
+												<hr>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary"
+														data-dismiss="modal">Close</button>
+													<input type="submit" class="btn btn-primary" name="Submit">
+
+													<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<br>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+	<div class="card shadow mb-4">
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+					<thead>
+						<tr class="bg-secondary" style="color: white">
+							<th>Customer Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for i in customers %}
+						<tr class="p-2 shadow card" style="border:1px solid;">
+							<td>
+								<div class="row">
+									<div class="col-sm">
+										<p>
+											<br>
+											{{i.firstname}} {{i.lastname}}
+										</p>
+									</div>
+									<div class="col-sm">
+										<p>
+											<!-- <small><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4223302d30232f232c23347a7a7502252f232b2e6c212d2f">[email&#160;protected]</a></small><br> -->
+											<small><i class="fas fa-phone"></i> {{i.contact}}</small><br>
+											<small><i>UIDAI:</i> {{i.aadhaar}}</small>
+										</p>
+									</div>
+									<div class="col-sm">
+										<p>
+											<small><i class="fa fa-map-marker"></i> {{i.address}}</small><br>
+											<small><i>Pin:</i> {{i.pincode}}</small>
+										</p>
+									</div>
+									<!-- <div class="col-sm">
+										<p class="btn-group">
+											<a href="" onclick="updateCustomer(this.id)" id="{{i.id}}"
+												class="btn btn-primary btn-sm" data-toggle="modal"
+												data-target="#updateCustomerModal">Edit</a>
+
+										</p>
+									</div> -->
+								</div>
+
+							</td>
+						</tr>
+						{% endfor %}
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+	<script>
+		function updateCustomer(Id) {
+			var CusId = Id;
+			$.ajax({
+				url: "",
+				type: "POST",
+				data: 'CusId=' + CusId,
+				dataType: "json",
+				success: function (ajaxResult) {
+					$('#CusId').val(CusId);
+					$('#CustomerName').html(ajaxResult.FullName);
+					$('#FirstName').val(ajaxResult.FirstName);
+					$('#LastName').val(ajaxResult.LastName);
+					$('#EmailId').val(ajaxResult.EmailId);
+					$('#Contact').val(ajaxResult.Contact);
+					$('#Address').val(ajaxResult.Address);
+					$('#Pincode').val(ajaxResult.Pincode);
+					$('#Aadhaar').val(ajaxResult.Aadhaar);
+				}
+			});
+		}
+	</script>
+
+	<div class="modal fade" id="updateCustomerModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h6><b>Update <u id="CustomerName"></u> Details</b></h6>
+				</div>
+				<div class="modal-body" id="modalbody">
+					<form action="" method="post">
+						<div class="row">
+							<input type="hidden" name="token" id="token" value="euiysvtzqxfahmlnrwjkgcdpob">
+							<input type="hidden" name="CusId" id="CusId">
+							<div class="col-md-6">
+								<label><b>First Name</b></label>
+								<input type="text" class="form-control" name="FirstName" id="FirstName"
+									pattern="[A-Za-z]{1,20}" required placeholder="Enter First Name"><br>
+							</div>
+							<div class="col-md-6">
+								<label><b>Last Name</b></label>
+								<input type="text" class="form-control" name="LastName" id="LastName"
+									pattern="[A-Za-z]{1,20}" required placeholder="Enter Last Name"><br>
+							</div>
+							<div class="col-md-6">
+								<label><b>Email Id</b></label>
+								<input type="email" class="form-control" name="EmailId" id="EmailId"
+									pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required
+									placeholder="Enter Email Id"><br>
+							</div>
+							<div class="col-md-6">
+								<label><b>Contact</b></label>
+								<input type="text" class="form-control" name="Contact" id="Contact" pattern="[0-9]{10}"
+									placeholder="Enter Contact Number" required><br>
+							</div>
+							<div class="col-md-12">
+								<label><b>Address</b></label>
+								<textarea type="text" class="form-control" name="Address" id="Address"
+									required></textarea><br>
+							</div>
+							<div class="col-md-6">
+								<label><b>Pincode</b></label>
+								<input type="text" class="form-control" name="Pincode" id="Pincode" pattern="[0-9]{6}"
+									placeholder="Enter Pincode" required><br>
+							</div>
+							<div class="col-md-6">
+								<label><b>Aadhaar Number</b></label>
+								<input type="text" class="form-control" name="Aadhaar" id="Aadhaar" pattern="[0-9]{12}"
+									required placeholder="Enter Aadhaar Number"><br>
+							</div>
+
+							<div class="col-md-12">
+								<center><input type="submit" value="Update Data" class="btn btn-success"></center>
+							</div>
+
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+
+
+{% endblock content %}
