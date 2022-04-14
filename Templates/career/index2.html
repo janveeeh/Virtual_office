@@ -1,0 +1,971 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    .img-profile {
+        height: 2rem;
+        width: 2rem;
+    }
+    .rounded-circle {
+        border-radius: 50%!important;
+    }
+    .topbar .topbar-divider {
+        width: 0;
+        border-right: 1px solid #e3e6f0;
+        height: calc(4.375rem - 2rem);
+        margin: auto 1rem;}
+    img {
+            vertical-align: middle;
+            border-style: none;
+        }
+</style>
+<head>
+  <meta charset="utf-8">
+  <title>My Team</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="icon" href="http://office.praedicoglobalresearch.com/public/img/logo.png" type="image/gif" sizes="16x16">
+ <!-- Custom fonts for this template-->
+ <link href="http://office.praedicoglobalresearch.com/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+ <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+ <!-- Custom styles for this template-->
+ <link href="http://office.praedicoglobalresearch.com/public/css/sb-admin-2.min.css" rel="stylesheet">
+
+ <link href="http://office.praedicoglobalresearch.com/public/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+ <script src="http://office.praedicoglobalresearch.com/public/vendor/jquery/jquery.min.js"></script>
+ <script src="http://office.praedicoglobalresearch.com/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+ <!-- Core plugin JavaScript-->
+ <script src="http://office.praedicoglobalresearch.com/public/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+ <!-- Custom scripts for all pages-->
+ <script src="http://office.praedicoglobalresearch.com/public/js/sb-admin-2.min.js"></script>
+
+ <!-- Page level plugins -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+ <!-- Page level custom scripts -->
+
+ <script src="http://office.praedicoglobalresearch.com/public/vendor/datatables/jquery.dataTables.min.js"></script>
+ <script src="http://office.praedicoglobalresearch.com/public/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+
+ <script src="http://office.praedicoglobalresearch.com/public/vendor/datatables/jquery.dataTables.min.js"></script>
+ <script src="http://office.praedicoglobalresearch.com/public/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+ <script src="http://office.praedicoglobalresearch.com/public/js/demo/datatables-demo.js"></script>
+
+ <script type="text/javascript">
+  $(document).ready(function() {
+      $('#dataTable1').DataTable();
+      $('#dataTable2').DataTable();
+      $('#dataTable3').DataTable();
+      $('#dataTable4').DataTable();
+      $('#dataTable5').DataTable();
+      $('#dataTable6').DataTable();
+  } );
+</script>
+
+</head>
+{% include "sidebar.html" %}
+
+<body id="body" style="margin-left:300px;">
+
+  <!-- Page Wrapper -->
+  
+
+    <!-- Sidebar -->
+
+
+<div id="wrapper">
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+  
+        <!-- Topbar -->
+        
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          
+          <span>
+            <a class="" style="cursor: pointer;" onclick="toggleSidebar()"><i class="fas fa-fw fa-lg fa-bars"></i></a>
+          </span>
+
+          <script>
+            function toggleSidebar()
+            {
+              $("#mySidenav").fadeToggle();
+              
+              var a=$("#body").css('margin-left');
+              
+              if(a=='300px'){
+                $("#body").css('margin-left','-=300px');
+
+              }
+              else{
+              $("#body").css('margin-left','+=300px');
+              }
+            }
+          </script>
+
+          <style>
+            @media only screen and (max-width: 600px) {
+              #mySidenav{display: none;}
+            }
+          </style>
+
+          <marquee style="font-family: Comic Sans MS; color: red">
+            <i>"To Win in the Marketplace you must first Win in the Workplace."</i>
+            <img src="http://office.praedicoglobalresearch.com/public/img/smiley.png" width="50px">
+          </marquee>
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <div class="topbar-divider d-flex d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow" style="width:150px">
+                
+              <a class="nav-link " href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img class="img-profile rounded-circle" src="http://office.praedicoglobalresearch.com/public/uploads/emp/Photograph.png">
+                  <span class="mr-2 d-flex d-lg-inline text-gray-700 small">{{data.firstname}} {{data.lastname}}</span>
+                
+                      </a>
+
+           
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item"  href="#" data-toggle="modal" data-target="#profileModal">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item"  href="#" data-toggle="modal" data-target="#passwordModal">
+                  <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Change Password
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <h4>Career</h4>
+
+          <hr class="divider"><br>
+           <div class="">
+              <a href="/career_show/" class="btn btn-primary shadow">
+                Add New
+              </a>
+            </div>
+            <br>
+
+            <div class="card shadow mb-4">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr class="bg-secondary" style="color:white">
+                      <th>Career Details</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% if stu %}
+                   
+                   {% for st in stu %}
+                                        <tr>
+                      <td>
+                      <div class="row">
+                        
+                      
+                        <div class="col-sm">
+
+                        <!-- Start Total Revenue -->
+                        <small>
+                        <b><i>Index</i></b><br><i></i>{{forloop.counter}}<br>                        </small>                 
+                               
+                        </div>
+
+                        <div class="col-sm">
+
+                        <!-- Start Total Revenue -->
+                        <small>
+                        <b><i>ID</i></b><br><i></i>{{st.id}}<br>                        </small>                 
+                               
+                        </div>
+
+
+
+                        <div class="col-sm">
+                        <!-- Start Joining Date -->
+                        <small>
+                          <b><i>Job_title</i></b><br>
+                          {{st.job_title}}<br>                       </small>
+                        <!-- End Joining Date -->
+                        </div>
+
+                        <div class="col-sm">
+
+                        <!-- Start Total Revenue -->
+                        <small>
+                        <b><i>Job_role</i></b><br><i class='fas fa-rupee-sign'></i>{{st.job_role}}<br>                        </small>                 
+                               
+                        </div>
+
+
+                        <div class="col-sm">
+
+                        <!-- Start Total Revenue -->
+                        <small>
+                        <b><i>Job_type</i></b><br><i ></i>{{st.job_type}}<br>                        </small>                 
+                               
+                        </div>
+
+                        <div class="col-sm">
+
+                        <!-- Start Total Revenue -->
+                        <small>
+                        <b><i>Job_type</i></b><br><i ></i>{{st.job_type}}<br>                        </small>                 
+                               
+                        </div>
+
+                        <div class="col-sm">
+
+                        <!-- Start Total Revenue -->
+                        <small>
+                        <b><i>Location</i></b><br><i></i>{{st.location}}<br>                        </small>                 
+                               
+                        </div>
+
+
+                        <div class="col-sm">
+
+                        <!-- Start Total Revenue -->
+                        <small>
+                        <b><i>Action</i></b><br><i></i><p class="btn-group">
+                  <a href="{% url 'updatedata' st.id %}" class="btn btn-primary btn-sm" >Edit</a>
+                  <a href="{% url 'deletedata' st.id%}" method="POST" class="btn btn-danger btn-sm" onclick="return confirm('Are You Sure?');"> {% csrf_token %}
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash2-fill" viewBox="0 0 16 16">
+  <path d="M2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225zm9.89-.69C10.966 2.214 9.578 2 8 2c-1.58 0-2.968.215-3.926.534-.477.16-.795.327-.975.466.18.14.498.307.975.466C5.032 3.786 6.42 4 8 4s2.967-.215 3.926-.534c.477-.16.795-.327.975-.466-.18-.14-.498-.307-.975-.466z"/>
+</svg>
+                  </a>
+                </p><br>                        </small>                 
+                               
+                        </div>
+
+
+                        <div class="col-sm">
+
+       
+                        
+                    </tr>
+                    {% endfor %}
+                 {% endif %}
+                                    </tbody>
+                </table>
+              </div>
+            </div>
+          </div>     
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+        
+  <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Praedico Global Research Pvt. Ltd. 2019</span>
+          </div>
+        </div>
+      </footer>      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+
+<!-- password modal -->
+<div class="modal fade"  id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalToggle" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggle">Change Password </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          
+        <form id='changepwd' method="post" enctype="application/x-www-form-urlencoded">{% csrf_token %}
+            <div class="form-row">
+            
+                <div class="form-group col-md-12">
+                  <label for="inputEmail4">Current Password</label>
+                  <input type="password" class="form-control" id="currentpwd" name="currentpwd" placeholder="Current Password">
+                </div>
+              
+                <div class="form-group col-md-12">
+                  <label for="inputEmail4">New password</label><br>
+                  <input type="password" class="form-control" id="newpwd" name="newpwd" placeholder="New password">
+               </div>
+              
+               <div class="form-group col-md-12">
+                  <label for="inputEmail4">Confirm password</label><br>
+                  <input type="password" class="form-control" id="confirmpwd" name="confirmpwd" onkeyup="chk()" placeholder="Re-enter Password">
+                  <span id="msg"></span> 
+              </div>
+                
+              </div>
+             
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn btn-secondary" >Close</button>
+        <button type="submit" class="btn btn-primary" >Update</button>
+      </div>
+    </form>
+        </div>
+       </div>     
+      </div>
+
+
+   <!-- Logout Modal-->
+
+  
+
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body"><i style="color:green; font-family: Comic Sans MS;"><b>Good Job... You have no pending Task.</b> <span class="fas fa-thumbs-up" style="font-size:25px;"></span></i></div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        <a class="btn btn-primary" href="/logout">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ 
+       <!-- Profile Modal-->
+
+
+       <div class="modal fade"  id="profileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">{{data.firstname}}'s Profile</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id='updateprofile' method="post" enctype="application/x-www-form-urlencoded">{% csrf_token %}
+                <div class="container-fluid">
+                  {% if data.emptype == 'head'%}
+                  <h4 class="mt-2">Team Head</h4>
+                  {% endif %}
+                    <div class="card shadow mb-4">
+                    <div class="card-body">
+                      <div class="row">
+                
+                 <div class="col-md-5">
+                
+                  <center>
+                    <style type="text/css">
+                      .image:hover .img{
+                        opacity:0.5;
+                      }
+                      #upload{
+                        display: none;
+                      }
+                    </style>
+                    
+                    <div style="border:3px solid #FF7456; width:215px; border-radius:50%;" class="image">
+                        <input id="upload" type="file"  name="userDP" onchange="#" />
+                      <a href="#" id="upload_link" class="img">
+                        <img src="http://office.praedicoglobalresearch.com/public/uploads/emp/Photograph.png" style="width:200px; height:200px; border-radius:50%; object-fit: cover; object-position:top; margin:3px;">
+                      </a>
+                      
+                    </div>
+  
+                    <h3 class="mt-3" style="color:#FF7456;">{{data.firstname}} {{data.lastname}}</h3>
+                  </center>
+              
+                  
+  
+                </div>
+  
+                <div class="col-md-6">
+                  <table cellpadding="10"  style="width:100%;">
+                    <tbody>
+                      <tr style="border-bottom:1px solid #FF7456; border-top:2px solid lightgrey;">
+                        <th style="color:#FF7456;">ID</th>
+                        <td>
+                          <i type="email" readonly  class="" value="{{data.empid}}" required style="width:85%; border-radius: 5px">{{data.empid}}</i>
+  
+                        </td>
+                      </tr>
+  
+                      <tr style="border-bottom:1px solid #FF7456;">
+                        <th style="color:#FF7456;">Email Id</th>
+                        <td>
+                        <input type="email" name="emailid" value="{{data.emailid}}" required style="width:85%; border-radius: 5px">                    
+                        </td>
+                      </tr>
+  
+                      <tr style="border-bottom:1px solid #FF7456;">
+                        <th style="color:#FF7456;">Contact</th>
+                        <td>
+                        <input type="text" name="contactnumber" value="{{data.contact}}" required style="width:85%; border-radius: 5px">                    
+                        </td>
+                      </tr>
+  
+                      <tr style="border-bottom:1px solid #FF7456;">
+                        <th style="color:#FF7456;">Address</th>
+                        <td>
+                        <input type="text" name="address" value="{{data.address}}" required style="width:85%; border-radius: 5px">                    
+                        </td>
+                      </tr>
+  
+                      <tr style="border-bottom:1px solid #FF7456;">
+                        <th style="color:#FF7456;">Pincode</th>
+                        <td>
+                        <input type="text" name="pincode" value="{{data.pincode}}" required style="width:85%; border-radius: 5px">                    
+                        </td>
+                      </tr>
+  
+                      <tr style="border-bottom:1px solid #FF7456;">
+                        <th style="color:#FF7456;">Aadhaar</th>
+                        <td>
+                        <input type="text" name="aadhaar" value="{{data.aadhaar}}" required style="width:85%; border-radius: 5px">                    
+                        </td>
+                      </tr>
+  
+                     
+                      <tr style="border-bottom:1px solid #FF7456;">
+                        <th style="color:#FF7456;">Description</th>
+                        <td>
+                        <i readonly   required style="width:85%; border-radius: 5px">{{data.description}}</i>                   
+                        </td>
+                      </tr>
+                     
+                     
+                      
+                    </tbody>
+                  </table>
+                </div>
+                
+                </div>
+              </div>
+             </div>     
+            </div>
+            
+                <!-- /.container-fluid -->
+        
+      
+            <div class="modal-footer">
+              <button type="button" data-dismiss="modal" class="btn btn-secondary" >Close</button>
+              <button type="submit" class="btn btn-primary" >Update</button>
+            </div>
+         
+          </form>
+          </div>
+        </div>
+      </div>
+  
+     
+
+
+
+
+
+
+    <div class="modal fade" id="A464" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <center>Profile of <u><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aae0cbc4dcc3849f9c9aeadacdd884c9c5c7">[email&#160;protected]</a></u></center>
+          </h5>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-12">
+            <center>
+              <img src="http://office.praedicoglobalresearch.com/public/uploads/emp/Photograph.png" style="width:200px; height:200px; border-radius:50%; object-fit: cover; object-position:top; margin:3px; border:5px solid orange;">
+            </center>
+          </div>
+          <div>
+            <center>
+              <h3>Janvi Patsaria</h3>
+              <font style="color:brown;"><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="136372676072617a7279727d657a25222353747e727a7f3d707c7e">[email&#160;protected]</a></font><br>
+              <font style="color:green;"><i class="fas fa-phone"></i> 9301049517</font><br>
+              <u><i><b>Job Role: </b> <br>Software Developer (Intern)</i></u>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="Update464" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <small>Update Profile of <u><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d79db6b9a1bef9e2e1e797a7b0a5f9b4b8ba">[email&#160;protected]</a></u></small>
+          </h5>
+          <span data-dismiss="modal" class="badge badge-dark" style="cursor: pointer;">x</span>
+        </div>
+        <div class="modal-body" style="">
+          <form  class="p-2" action="http://office.praedicoglobalresearch.com/index.php/Employee/Update_Employee_by_Head" method="post">
+                
+                <input type="hidden" name="EmployeeId" value="Janvi.560@pgr.com">
+                <div class="form-row">
+                  <div class="col">
+                    <label style="color:black; margin-bottom: -5px"> <small>First Name</small></label>
+                    <input type="text" class="form-control form-control-sm" name="FirstName" pattern="[A-Za-z]{1,20}" required placeholder="First Name" title="Please Enter Alphabets" value="Janvi">
+                  </div>
+                  <div class="col">
+                    <label style="color:black; margin-bottom: -5px"> <small>Last Name</small></label>
+                    <input type="text" class="form-control form-control-sm" name="LastName" pattern="[A-Za-z]{1,20}" required placeholder="Last Name" title="Please Enter Alphabets" value="Patsaria">
+                  </div>
+                </div><br>
+                
+                <div class="form-row">
+                  <div class="col">
+                    <label style="color:black; margin-bottom: -5px"> <small>Email ID</small></label>
+                    <input type="email" class="form-control form-control-sm" name="EmailId" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required placeholder="Email ID" value="patsariajanvi610@gmail.com">
+                  </div>
+                  <div class="col">
+                    <label style="color:black; margin-bottom: -5px"> <small>Contact Number</small></label>
+                    <input type="tel" class="form-control form-control-sm" name="Contact"pattern="[6789][0-9]{9}" required placeholder="Contact Number" title="Please Enter 10 digits Numbers starts with 6/7/8/9"  value="9301049517">
+                  </div>
+                  <div class="col">
+                    <label style="color:black; margin-bottom: -5px"> <small>Aadhaar Number</small></label>
+                    <input type="tel" class="form-control form-control-sm" name="Aadhaar"pattern="[0-9]{12}"required placeholder="Aadhar Number" title="Please valid format like 123456789101"  value="123456789098">
+                  </div>
+                </div><br>
+
+                <div class="form-row">
+                  <div class="col">
+                    <label style="color:black; margin-bottom: -5px"> <small>Start Date</small></label>
+                    <input type="date" name="start_date" class="form-control form-control-sm" value="2022-01-10"><br>
+                  </div>
+                  <div class="col">
+                    <label style="color:black; margin-bottom: -5px"> <small>End Date</small></label>
+                    <input type="date" name="end_date" class="form-control form-control-sm" value="2022-05-10"><br>
+                  </div>
+                </div>
+
+                <br>
+                
+                <input type="submit" class="btn btn-success btn-sm" value="Update"> <input type="reset" class="btn btn-dark btn-sm" value="Clear">
+              
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="modal fade" id="A465" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <center>Profile of <u><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="733e121d12055d4a4145330314015d101c1e">[email&#160;protected]</a></u></center>
+          </h5>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-12">
+            <center>
+              <img src="http://office.praedicoglobalresearch.com/public/uploads/emp/Photograph.png" style="width:200px; height:200px; border-radius:50%; object-fit: cover; object-position:top; margin:3px; border:5px solid orange;">
+            </center>
+          </div>
+          <div>
+            <center>
+              <h3>Manav Arora</h3>
+              <font style="color:brown;"><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c7a6b5a8b5a6aaa6a9a6b1fffff087a0aaa6aeabe9a4a8aa">[email&#160;protected]</a></font><br>
+              <font style="color:green;"><i class="fas fa-phone"></i> 8965952196</font><br>
+              <u><i><b>Job Role: </b>Finance<br>Nan</i></u>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="Update465" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <small>Update Profile of <u><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c489a5aaa5b2eafdf6f284b4a3b6eaa7aba9">[email&#160;protected]</a></u></small>
+          </h5>
+          <span data-dismiss="modal" class="badge badge-dark" style="cursor: pointer;">x</span>
+        </div>
+        <div class="modal-body" style="">
+          <form  class="p-2" action="http://office.praedicoglobalresearch.com/index.php/Employee/Update_Employee_by_Head" method="post">
+                
+                <input type="hidden" name="EmployeeId" value="Manav.926@pgr.com">
+                <div class="form-row">
+                  <div class="col">
+                    <label style="color:black; margin-bottom: -5px"> <small>First Name</small></label>
+                    <input type="text" class="form-control form-control-sm" name="FirstName" pattern="[A-Za-z]{1,20}" required placeholder="First Name" title="Please Enter Alphabets" value="Manav">
+                  </div>
+                  <div class="col">
+                    <label style="color:black; margin-bottom: -5px"> <small>Last Name</small></label>
+                    <input type="text" class="form-control form-control-sm" name="LastName" pattern="[A-Za-z]{1,20}" required placeholder="Last Name" title="Please Enter Alphabets" value="Arora">
+                  </div>
+                </div><br>
+                
+                <div class="form-row">
+                  <div class="col">
+                    <label style="color:black; margin-bottom: -5px"> <small>Email ID</small></label>
+                    <input type="email" class="form-control form-control-sm" name="EmailId" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required placeholder="Email ID" value="aroramanav887@gmail.com">
+                  </div>
+                  <div class="col">
+                    <label style="color:black; margin-bottom: -5px"> <small>Contact Number</small></label>
+                    <input type="tel" class="form-control form-control-sm" name="Contact"pattern="[6789][0-9]{9}" required placeholder="Contact Number" title="Please Enter 10 digits Numbers starts with 6/7/8/9"  value="8965952196">
+                  </div>
+                  <div class="col">
+                    <label style="color:black; margin-bottom: -5px"> <small>Aadhaar Number</small></label>
+                    <input type="tel" class="form-control form-control-sm" name="Aadhaar"pattern="[0-9]{12}"required placeholder="Aadhar Number" title="Please valid format like 123456789101"  value="123456789812">
+                  </div>
+                </div><br>
+
+                <div class="form-row">
+                  <div class="col">
+                    <label style="color:black; margin-bottom: -5px"> <small>Start Date</small></label>
+                    <input type="date" name="start_date" class="form-control form-control-sm" value="2022-02-02"><br>
+                  </div>
+                  <div class="col">
+                    <label style="color:black; margin-bottom: -5px"> <small>End Date</small></label>
+                    <input type="date" name="end_date" class="form-control form-control-sm" value="2022-02-27"><br>
+                  </div>
+                </div>
+
+                <br>
+                
+                <input type="submit" class="btn btn-success btn-sm" value="Update"> <input type="reset" class="btn btn-dark btn-sm" value="Clear">
+              
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <div class="modal fade messageBox" id="messageBox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><i>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Warning</p>
+<p>Message:  Undefined variable $msg_title</p>
+<p>Filename: include/Employee_LogoutModel.php</p>
+<p>Line Number: 39</p>
+
+
+  <p>Backtrace:</p>
+  
+    
+  
+    
+  
+    
+      <p style="margin-left:10px">
+      File: /home/office/public_html/application/views/Employee/include/Employee_LogoutModel.php<br />
+      Line: 39<br />
+      Function: _error_handler      </p>
+
+    
+  
+    
+      <p style="margin-left:10px">
+      File: /home/office/public_html/application/views/Employee/Your_Team.php<br />
+      Line: 552<br />
+      Function: include     </p>
+
+    
+  
+    
+  
+    
+  
+    
+      <p style="margin-left:10px">
+      File: /home/office/public_html/application/controllers/Employee.php<br />
+      Line: 1019<br />
+      Function: view      </p>
+
+    
+  
+    
+  
+    
+      <p style="margin-left:10px">
+      File: /home/office/public_html/index.php<br />
+      Line: 315<br />
+      Function: require_once      </p>
+
+    
+  
+
+</div></i></h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="" style="border:2px solid grey; border-radius: 10px; padding:10px;"> 
+            <font style="font-size:16px; font-family: cursive;"><pre style="white-space: pre-wrap;"><i>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Warning</p>
+<p>Message:  Undefined variable $msg_message</p>
+<p>Filename: include/Employee_LogoutModel.php</p>
+<p>Line Number: 46</p>
+
+
+  <p>Backtrace:</p>
+  
+    
+  
+    
+  
+    
+      <p style="margin-left:10px">
+      File: /home/office/public_html/application/views/Employee/include/Employee_LogoutModel.php<br />
+      Line: 46<br />
+      Function: _error_handler      </p>
+
+    
+  
+    
+      <p style="margin-left:10px">
+      File: /home/office/public_html/application/views/Employee/Your_Team.php<br />
+      Line: 552<br />
+      Function: include     </p>
+
+    
+  
+    
+  
+    
+  
+    
+      <p style="margin-left:10px">
+      File: /home/office/public_html/application/controllers/Employee.php<br />
+      Line: 1019<br />
+      Function: view      </p>
+
+    
+  
+    
+  
+    
+      <p style="margin-left:10px">
+      File: /home/office/public_html/index.php<br />
+      Line: 315<br />
+      Function: require_once      </p>
+
+    
+  
+
+</div></i></pre></font>
+          </div>
+          <br>
+          <p style="color:red;">
+            <small>
+              <i><b>Note- If you press the "Done" button, it means that you have read and understood this message well.</b></i>
+            </small>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+          <a class="btn btn-primary" href="http://office.praedicoglobalresearch.com/index.php/Employee/confirm_msg?msg_id=
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Warning</p>
+<p>Message:  Undefined variable $msg_id</p>
+<p>Filename: include/Employee_LogoutModel.php</p>
+<p>Line Number: 57</p>
+
+
+  <p>Backtrace:</p>
+  
+    
+  
+    
+  
+    
+      <p style="margin-left:10px">
+      File: /home/office/public_html/application/views/Employee/include/Employee_LogoutModel.php<br />
+      Line: 57<br />
+      Function: _error_handler      </p>
+
+    
+  
+    
+      <p style="margin-left:10px">
+      File: /home/office/public_html/application/views/Employee/Your_Team.php<br />
+      Line: 552<br />
+      Function: include     </p>
+
+    
+  
+    
+  
+    
+  
+    
+      <p style="margin-left:10px">
+      File: /home/office/public_html/application/controllers/Employee.php<br />
+      Line: 1019<br />
+      Function: view      </p>
+
+    
+  
+    
+  
+    
+      <p style="margin-left:10px">
+      File: /home/office/public_html/index.php<br />
+      Line: 315<br />
+      Function: require_once      </p>
+
+    
+  
+
+</div>">Done</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap core JavaScript-->
+  
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+
+
+
+    
+<script>
+  function chk(){
+    if(newpwd.value==confirmpwd.value)
+    {msg.innerHTML = "<font color='green'>Password Matched</font>"}
+    else
+    {msg.innerHTML = "<font color='red'>Password not matched</font>"}
+  
+    }    
+  
+    $("#changepwd").submit(function (e) {
+      
+        // preventing from page reload and default actions
+        e.preventDefault();
+        // serialize the data for sending the form data.
+        var serializedData = $(this).serialize();
+        
+        // make POST ajax call
+        $.ajax({
+            type: 'POST',
+            url: "{% url 'changepassword' %}",
+            data: serializedData,
+            success: function (response) {
+              // console.log(response)
+              window.location.reload();
+              alert("Password Updated Successfully")
+    
+              
+            },
+            error: function (response) {
+                // alert the error if any error occured
+                //alert(response["responseJSON"]["error"]);
+                alert("Some Unknown Error Occured Please try after sometime..")
+                window.location.reload();
+            }
+        })
+    })
+  </script>
+  <script>
+    $("#updateprofile").submit(function (e) {
+      // preventing from page reload and default actions
+      e.preventDefault();
+      // serialize the data for sending the form data.
+      var serializedData = $(this).serialize();
+      
+      // make POST ajax call
+      $.ajax({
+          type: 'POST',
+          url: "{% url 'updateprofile' %}",
+          data: serializedData,
+          success: function (response) {
+            // console.log(response)
+            window.location.reload();
+            alert("Updated Successfully")
+  
+            
+          },
+          error: function (response) {
+              // alert the error if any error occured
+              window.location.reload();
+              alert(response["responseJSON"]["error"]);
+          }
+      })
+  })
+  
+</script>  
+</html>

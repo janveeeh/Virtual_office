@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>PTSR</title>
+  
+  <title>Praedico Global Research - PTSR</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src ="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/css/bootstrap-toggle.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="icon" href="http://office.praedicoglobalresearch.com/public/img/logo.png" type="image/gif" sizes="16x16">
+
+  <link rel="icon" href="http://office.praedicoglobalresearch.com/public/img/logo.png" type="image/gif" sizes="16x16">
+
+  <!-- Custom fonts for this template-->
+  <link href="http://office.praedicoglobalresearch.com/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="http://office.praedicoglobalresearch.com/public/css/sb-admin-2.min.css" rel="stylesheet">
+
+  <link href="http://office.praedicoglobalresearch.com/public/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+  <script src="http://office.praedicoglobalresearch.com/public/vendor/jquery/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="http://office.praedicoglobalresearch.com/public/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="http://office.praedicoglobalresearch.com/public/js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src=""></script>
+
+  <!-- Page level custom scripts -->
+  <script src=""></script>
+  <script src=""></script>
+
+  <script src="http://office.praedicoglobalresearch.com/public/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="http://office.praedicoglobalresearch.com/public/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="http://office.praedicoglobalresearch.com/public/js/demo/datatables-demo.js"></script>
+
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('#dataTable1').DataTable();
+        $('#dataTable2').DataTable();
+        $('#dataTable3').DataTable();
+        $('#dataTable4').DataTable();
+        $('#dataTable5').DataTable();
+        $('#dataTable6').DataTable();
+    } );
+  </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+{% include "sidebar.html" %}
+ 
+<body id="body" style="margin-left:300px;">
+  
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+  
+          <!-- Topbar -->
+          
+          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+  
+            <!-- Sidebar Toggle (Topbar) -->
+            
+            <span>
+              <a class="" style="cursor: pointer;" onclick="toggleSidebar()"><i class="fas fa-fw fa-lg fa-bars"></i></a>
+            </span>
+  
+            <script>
+              function toggleSidebar()
+              {
+                $("#mySidenav").fadeToggle();
+                
+                var a=$("#body").css('margin-left');
+                
+                if(a=='300px'){
+                  $("#body").css('margin-left','-=300px');
+
+                }
+                else{
+                $("#body").css('margin-left','+=300px');
+                }
+              }
+            </script>
+  
+            <style>
+              @media only screen and (max-width: 600px) {
+                #mySidenav{display: none;}
+              }
+            </style>
+  
+            <marquee style="font-family: Comic Sans MS; color: red">
+              <i>"To Win in the Marketplace you must first Win in the Workplace."</i>
+              <img src="http://office.praedicoglobalresearch.com/public/img/smiley.png" width="50px">
+            </marquee>
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+  
+              <div class="topbar-divider d-none d-sm-block"></div>
+ 
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                  
+                <a class="nav-link " href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="img-profile rounded-circle" src="http://office.praedicoglobalresearch.com/public/uploads/emp/Photograph.png">
+                    <span class="mr-2 d-none d-lg-inline text-gray-700 small">Shalvi519pgr.com</span>
+                  
+                        </a>
+
+             
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" href="http://office.praedicoglobalresearch.com/index.php/Employee/profile">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="http://office.praedicoglobalresearch.com/index.php/Employee/ChangePassword">
+                    <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Change Password
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+  
+            </ul>
+  
+          </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <h4>Customer's Complains</h4>
+
+          <hr class="divider"><br>
+
+            <div class="">
+              <a href="/comp_add" class="btn btn-primary shadow">
+                Add New
+              </a>
+            </div>
+            <br>
+
+            <div class="card shadow mb-4">
+            <div class="card-body">
+              <div class="table-responsive p-2">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr class="bg-secondary" style="color: rgb(229, 226, 226)">
+                      <th width="2%"></th>
+                      <th>Complain Details</th>                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    {% for complainlist in complainlist %}
+                      <td>{{forloop.counter}}</td>
+                      <td class="p-2 shadow card" style="border:1px solid;">
+                        <div class="row">
+                          <div class="col-sm">
+                            <p>
+                              <small>
+                                <i class="bi bi-calendar3"></i> <strong><i>Date: </strong>{{complainlist.date}}</i>
+                              </small>    
+                            </p>
+                          </div>
+                          <div class="col-sm">
+                            <p>
+                              <small>
+                               <strong> <i>Order Id:  </strong>PGROID-{{complainlist.orderid}}</i><br>
+                            
+                              </small>
+                            </p>
+                          </div>
+                          <div class="col-sm">
+                            <p>
+                              <small>
+                                <i><strong>Complain type: </strong>{{complainlist.complaintype}}</i><br>
+                                
+                              </small>
+                            </p>
+                          </div>
+                          <div class="col-sm">
+                            <p>
+                              <small>
+                                
+                                <strong><i> Description: </strong>{{complainlist.description}}</i>
+                              </small>
+                            </p>
+                          </div>
+
+      
+                        </div>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                                       
+                        </div>
+                      </td>
+                    </tr>
+                </tbody>
+                </table>
+              </div>
+            </div>
+          </div>     
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      	
+	<footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Praedico Global Research Pvt. Ltd. 2019</span>
+          </div>
+        </div>
+      </footer>      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  
+    
+  
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body"><i style='color:green; font-family: Comic Sans MS;'><b>Good Job... You have no pending Task.</b> <span class='fas fa-thumbs-up' style='font-size:25px;'></span></i></div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="http://office.praedicoglobalresearch.com/index.php/Employee/logout">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade messageBox" id="messageBox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><i>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Warning</p>
+<p>Message:  Undefined variable $msg_title</p>
+<p>Filename: include/Employee_LogoutModel.php</p>
+<p>Line Number: 39</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/office/public_html/application/views/Employee/include/Employee_LogoutModel.php<br />
+			Line: 39<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/office/public_html/application/views/Employee/Complains.php<br />
+			Line: 148<br />
+			Function: include			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/office/public_html/application/controllers/Employee.php<br />
+			Line: 424<br />
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/office/public_html/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div></i></h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="" style="border:2px solid grey; border-radius: 10px; padding:10px;"> 
+            <font style="font-size:16px; font-family: cursive;"><pre style="white-space: pre-wrap;"><i>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Warning</p>
+<p>Message:  Undefined variable $msg_message</p>
+<p>Filename: include/Employee_LogoutModel.php</p>
+<p>Line Number: 46</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/office/public_html/application/views/Employee/include/Employee_LogoutModel.php<br />
+			Line: 46<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/office/public_html/application/views/Employee/Complains.php<br />
+			Line: 148<br />
+			Function: include			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/office/public_html/application/controllers/Employee.php<br />
+			Line: 424<br />
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/office/public_html/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div></i></pre></font>
+          </div>
+          <br>
+          <p style="color:red;">
+            <small>
+              <i><b>Note- If you press the "Done" button, it means that you have read and understood this message well.</b></i>
+            </small>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+          <a class="btn btn-primary" href="http://office.praedicoglobalresearch.com/index.php/Employee/confirm_msg?msg_id=
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Warning</p>
+<p>Message:  Undefined variable $msg_id</p>
+<p>Filename: include/Employee_LogoutModel.php</p>
+<p>Line Number: 57</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/office/public_html/application/views/Employee/include/Employee_LogoutModel.php<br />
+			Line: 57<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/office/public_html/application/views/Employee/Complains.php<br />
+			Line: 148<br />
+			Function: include			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/office/public_html/application/controllers/Employee.php<br />
+			Line: 424<br />
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/office/public_html/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>">Done</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap core JavaScript-->
+  
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+<script>
+
+</script>
+</html>
